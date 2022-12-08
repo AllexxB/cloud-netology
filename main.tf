@@ -10,7 +10,6 @@ terraform {
 
 provider "yandex" {
   zone      = "ru-central1-a"
-  service_account_key_file = "/home/alex//key.json"
   folder_id = "b1g2g1prvm8gau6r00ap"
 }
 resource "yandex_compute_instance" "vm-1" {
