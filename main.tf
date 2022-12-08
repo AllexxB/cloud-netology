@@ -10,7 +10,7 @@ terraform {
 
 provider "yandex" {
   zone      = "ru-central1-a"
-  service_account_key_file = "/home/alex/cloud-terraform/key.json"
+  service_account_key_file = "/home/alex//key.json"
   folder_id = "b1g2g1prvm8gau6r00ap"
 }
 resource "yandex_compute_instance" "vm-1" {
@@ -33,7 +33,7 @@ resource "yandex_compute_instance" "vm-1" {
   }
 
   metadata = {
-    user-data = "${file("/home/alex/cloud-terraform/users")}"
+    user-data = "${file("~/cloud-terraform/users")}"
   }
 }
 
@@ -57,7 +57,7 @@ resource "yandex_compute_instance" "vm-2" {
   }
 
   metadata = {
-    user-data = "${file("/home/alex/cloud-terraform/users")}"
+    user-data = "${file("~/cloud-terraform/users")}"
   }
 }
 
